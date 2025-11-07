@@ -1,0 +1,38 @@
+HTTrack3.49-2+htsswf+htsjava launched on Thu, 06 Nov 2025 14:45:39 at https://foolsboosting.com/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://foolsboosting.com/ -O1 "C:\Users\User\Documents\boosts\fools2" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:47:01	Error: 	"Method Not Allowed" (405) at link https://foolsboosting.com/xmlrpc.php (from https://foolsboosting.com/)
+14:50:39	Warning: 	Moved Permanently for https://foolsboosting.com/?p=14
+14:50:39	Warning: 	File has moved from https://foolsboosting.com/?p=14 to https://foolsboosting.com/my-account/
+14:50:43	Error: 	"Not Found" (404) at link https://foolsboosting.com/my-account/wp-login.php (from https://foolsboosting.com/my-account/)
+14:50:47	Warning: 	Moved Permanently for https://foolsboosting.com/?p=65
+14:50:47	Warning: 	File has moved from https://foolsboosting.com/?p=65 to https://foolsboosting.com/how-does-it-work/
+14:50:47	Warning: 	Moved Permanently for https://foolsboosting.com/?p=67
+14:50:47	Warning: 	File has moved from https://foolsboosting.com/?p=67 to https://foolsboosting.com/about-us/
+14:50:47	Warning: 	Moved Permanently for https://foolsboosting.com/?p=69
+14:50:47	Warning: 	File has moved from https://foolsboosting.com/?p=69 to https://foolsboosting.com/contact/
+14:50:47	Warning: 	Moved Permanently for https://foolsboosting.com/?p=12
+14:50:47	Warning: 	File has moved from https://foolsboosting.com/?p=12 to https://foolsboosting.com/cart/
+14:50:47	Warning: 	Moved Permanently for https://foolsboosting.com/?page_id=11
+14:50:47	Warning: 	File has moved from https://foolsboosting.com/?page_id=11 to https://foolsboosting.com/shop/fortis-colosseum-quivers/bundles/155/
+14:50:47	Error: 	"Bad Request" (400) at link https://foolsboosting.com/wp-admin/admin-ajax.php (from https://foolsboosting.com/cart/)
+14:50:48	Warning: 	Found for https://foolsboosting.com/shop/megascales/want-a-twisted-bow-on-your-account/guaranteed-twisted-bow-open-a-ticket/
+14:50:48	Warning: 	File has moved from https://foolsboosting.com/shop/megascales/want-a-twisted-bow-on-your-account/guaranteed-twisted-bow-open-a-ticket/ to https://foolsboosting.com/cart/
+14:57:57	Warning: 	Moved Permanently for https://foolsboosting.com/?p=15
+14:57:57	Warning: 	File has moved from https://foolsboosting.com/?p=15 to https://foolsboosting.com/refund_returns/
+14:58:02	Warning: 	Moved Permanently for https://foolsboosting.com/?p=1180
+14:58:02	Warning: 	File has moved from https://foolsboosting.com/?p=1180 to https://foolsboosting.com/copyright-policy/
+14:58:03	Warning: 	Moved Permanently for https://foolsboosting.com/?p=1185
+14:58:03	Warning: 	File has moved from https://foolsboosting.com/?p=1185 to https://foolsboosting.com/privacy-policy/
+14:58:19	Error: 	"Not Found" (404) at link https://foolsboosting.com/shop/fortis-colosseum-quivers/bundles/155/ (from https://foolsboosting.com/?page_id=11)
+15:16:11	Warning: 	Retry after error -4 (Connect Error) at link https://foolsboosting.com/product-category/quests-minigames-outfits/achievement-diaries/?add-to-cart=678 (from https://foolsboosting.com/product-category/quests-minigames-outfits/achievement-diaries/)
+15:23:54	Warning: 	Moved Permanently for https://foolsboosting.com/?p=13
+15:23:54	Warning: 	File has moved from https://foolsboosting.com/?p=13 to https://foolsboosting.com/checkout/
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 hours 22 minutes 22 seconds : 3231 links scanned, 3214 files written (540126663 bytes overall) [118918128 bytes received at 24062 bytes/sec], 499035008 bytes transferred using HTTP compression in 3149 files, ratio 15%, 1.2 requests per connection
+(4 errors, 23 warnings, 0 messages)
