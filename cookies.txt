@@ -1,7 +1,0 @@
-# HTTrack Website Copier Cookie File
-# This file format is compatible with Netscape cookies
-foolsboosting.com	TRUE	/	FALSE	1999999999	mo_discord_signup_url	foolsboosting.com
-foolsboosting.com	TRUE	/	FALSE	1999999999	woocommerce_items_in_cart	1
-foolsboosting.com	TRUE	/	FALSE	1999999999	wp_woocommerce_session_799b2f569f8fffe0e054288fe046c61f	t_44a3eb93e10060816439c634cf6a10%7C1762609663%7C1762523263%7C%24generic%24qsHPliYOeD1PPS2xYGtiwpr1MuAzVgtRo1poUTwX
-foolsboosting.com	TRUE	/	FALSE	1999999999	woocommerce_cart_hash	e2785df89368072dd750c3e463e63c71
-
