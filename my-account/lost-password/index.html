@@ -963,6 +963,41 @@ var dgwt_wcas = {"labels":{"product_plu":"Products","vendor":"Vendor","vendor_pl
 <script type="text/javascript" src="../../wp-content/plugins/ajax-search-for-woocommerce/assets/js/search.min65f0.js?ver=1.31.0" id="jquery-dgwt-wcas-js"></script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const backend = "https://fools-auth-backend-production.up.railway.app"; // replace with your backend
+
+  const form = document.querySelector(".woocommerce-ResetPassword");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = document.querySelector("#user_login").value.trim();
+    if (!email) return alert("Please enter your email.");
+
+    try {
+      const res = await fetch(`${backend}/forgot-password`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await res.json();
+
+      if (res.ok) {
+        alert("✅ " + data.message);
+        form.reset();
+      } else {
+        alert("❌ " + (data.error || "Failed to send reset email"));
+      }
+    } catch (err) {
+      alert("⚠️ Error contacting server.");
+      console.error(err);
+    }
+  });
+});
+</script>
 
 </body>
 
