@@ -1062,6 +1062,100 @@ var dgwt_wcas = {"labels":{"product_plu":"Products","vendor":"Vendor","vendor_pl
 <script type="text/javascript" src="../wp-content/plugins/ajax-search-for-woocommerce/assets/js/search.min65f0.js?ver=1.31.0" id="jquery-dgwt-wcas-js"></script>
 
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const backend = "fools-auth-backend-production.up.railway.app"; // change this
+
+  // ===== LOGIN =====
+  const loginForm = document.querySelector(".woocommerce-form-login");
+  if (loginForm) {
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.querySelector("#username").value.trim();
+      const password = document.querySelector("#password").value.trim();
+
+      if (!email || !password) {
+        alert("Please enter your email and password.");
+        return;
+      }
+
+      try {
+        const res = await fetch(`${backend}/login`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          alert("✅ " + data.message);
+          localStorage.setItem("token", data.token);
+          window.location.href = "../index.html"; // redirect after login
+        } else {
+          alert("❌ " + (data.error || "Login failed"));
+        }
+      } catch (err) {
+        alert("⚠️ Error connecting to server.");
+        console.error(err);
+      }
+    });
+  }
+
+  // ===== REGISTER =====
+  const registerForm = document.querySelector(".woocommerce-form-register");
+  if (registerForm) {
+    registerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const email = document.querySelector("#reg_email").value.trim();
+      const password = prompt("Enter a password for your new account:");
+
+      if (!email || !password) {
+        alert("Email and password are required.");
+        return;
+      }
+
+      try {
+        const res = await fetch(`${backend}/register`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+        const data = await res.json();
+
+        if (res.ok) {
+          alert("🎉 " + data.message);
+        } else {
+          alert("❌ " + (data.error || "Registration failed"));
+        }
+      } catch (err) {
+        alert("⚠️ Error connecting to server.");
+        console.error(err);
+      }
+    });
+  }
+
+  // ===== LOST PASSWORD =====
+  const lostLink = document.querySelector(".woocommerce-LostPassword a");
+  if (lostLink) {
+    lostLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      const email = prompt("Enter your registered email to reset password:");
+      if (!email) return;
+
+      fetch(`${backend}/forgot-password`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      })
+        .then((r) => r.json())
+        .then((d) => alert(d.message || d.error))
+        .catch(() => alert("Error contacting server."));
+    });
+  }
+});
+</script>
 
 </body>
 
